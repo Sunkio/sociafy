@@ -19,7 +19,7 @@ import {
   ModeNight,
 } from "@mui/icons-material";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -84,7 +84,9 @@ const Sidebar = () => {
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
                 <ModeNight />
-                <Switch />
+                <Switch
+                  onChange={() => setMode(mode === "light" ? "dark" : "light")}
+                />
               </ListItemIcon>
             </ListItemButton>
           </ListItem>
