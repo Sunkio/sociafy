@@ -6,6 +6,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+    Switch,
 } from "@mui/material";
 import {
   Home,
@@ -82,6 +83,7 @@ const Sidebar = () => {
           <ListItemButton component="a" href="#simple-list">
             <ListItemIcon>
               <ModeNight />
+              <Switch />
             </ListItemIcon>
           </ListItemButton>
         </ListItem>
